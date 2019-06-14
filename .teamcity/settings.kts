@@ -48,6 +48,6 @@ object SubTW_ConfigForSubtw : BuildType({
     name = "config for subtw"
 
     vcs {
-        root(Foobar)
+        root(Foobar11)
     }
 })
