@@ -27,12 +27,12 @@ version = "2019.1"
 
 project {
 
-    vcsRoot(Foobar11)
+    vcsRoot(Foobar12)
 
     subProject(SubTW)
 }
 
-object Foobar11 : GitVcsRoot({
+object Foobar12: GitVcsRoot({
     name = "https://github.com/innayan/foobar"
     url = "https://github.com/innayan/foobar"
 })
@@ -48,6 +48,6 @@ object SubTW_ConfigForSubtw : BuildType({
     name = "config for subtw"
 
     vcs {
-        root(Foobar11)
+        root(Foobar12)
     }
 })
