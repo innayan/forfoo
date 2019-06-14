@@ -27,12 +27,12 @@ version = "2019.1"
 
 project {
 
-    vcsRoot(Foobar1)
+    vcsRoot(Foobar11)
 
     subProject(SubTW)
 }
 
-object Foobar1 : GitVcsRoot({
+object Foobar11 : GitVcsRoot({
     name = "https://github.com/innayan/foobar"
     url = "https://github.com/innayan/foobar"
 })
