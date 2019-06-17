@@ -30,12 +30,12 @@ project {
 
     vcsRoot(Foobar12)
 
-    template(Xxx1)
+    template(Xxx2)
 
     subProject(SubTW)
 }
 
-object Xxx1 : Template({
+object Xxx2 : Template({
     name = "xxx"
 
     steps {
@@ -60,7 +60,7 @@ object SubTW : Project({
 })
 
 object SubTW_ConfigForSubtw : BuildType({
-    templates(Xxx1)
+    templates(Xxx2)
     name = "config for subtw"
 
     vcs {
