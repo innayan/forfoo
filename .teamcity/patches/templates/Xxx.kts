@@ -11,7 +11,7 @@ To apply the patch, create a template with id = 'Xxx'
 in the root project, and delete the patch script.
 */
 create(DslContext.projectId, Template({
-    id("Xxx")
+    id("Xxx1")
     name = "xxx"
 
     steps {
