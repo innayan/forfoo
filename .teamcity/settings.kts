@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2018_2.*
+import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2018_2.vcs.GitVcsRoot
 
 /*
@@ -29,10 +30,24 @@ project {
 
     vcsRoot(Foobar12)
 
+    template(Xxx1)
+
     subProject(SubTW)
 }
 
-object Foobar12: GitVcsRoot({
+object Xxx1 : Template({
+    name = "xxx"
+
+    steps {
+        script {
+            name = "from template"
+            id = "RUNNER_11"
+            scriptContent = "echo template"
+        }
+    }
+})
+
+object Foobar12 : GitVcsRoot({
     name = "https://github.com/innayan/foobar"
     url = "https://github.com/innayan/foobar"
 })
@@ -45,6 +60,7 @@ object SubTW : Project({
 })
 
 object SubTW_ConfigForSubtw : BuildType({
+    templates(Xxx1)
     name = "config for subtw"
 
     vcs {
