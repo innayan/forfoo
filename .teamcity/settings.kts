@@ -28,14 +28,14 @@ version = "2019.1"
 
 project {
 
-    vcsRoot(Foobar12)
+    vcsRoot(Foobar13)
 
-    template(Xxx2)
+    template(Xxx3)
 
     subProject(SubTW)
 }
 
-object Xxx2 : Template({
+object Xxx3 : Template({
     name = "xxx"
 
     steps {
@@ -60,10 +60,10 @@ object SubTW : Project({
 })
 
 object SubTW_ConfigForSubtw : BuildType({
-    templates(Xxx2)
+    templates(Xxx3)
     name = "config for subtw"
 
     vcs {
-        root(Foobar12)
+        root(Foobar13)
     }
 })
