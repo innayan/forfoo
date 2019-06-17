@@ -47,7 +47,7 @@ object Xxx3 : Template({
     }
 })
 
-object Foobar12 : GitVcsRoot({
+object Foobar13 : GitVcsRoot({
     name = "https://github.com/innayan/foobar"
     url = "https://github.com/innayan/foobar"
 })
