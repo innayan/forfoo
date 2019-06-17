@@ -28,14 +28,14 @@ version = "2019.1"
 
 project {
 
-    vcsRoot(Foobar13)
+    vcsRoot(Foobar1)
 
-    template(Xxx3)
+    template(Xxx)
 
     subProject(SubTW)
 }
 
-object Xxx3 : Template({
+object Xxx : Template({
     name = "xxx"
 
     steps {
@@ -47,7 +47,7 @@ object Xxx3 : Template({
     }
 })
 
-object Foobar13 : GitVcsRoot({
+object Foobar1 : GitVcsRoot({
     name = "https://github.com/innayan/foobar"
     url = "https://github.com/innayan/foobar"
 })
@@ -60,10 +60,10 @@ object SubTW : Project({
 })
 
 object SubTW_ConfigForSubtw : BuildType({
-    templates(Xxx3)
+    templates(Xxx)
     name = "config for subtw"
 
     vcs {
-        root(Foobar13)
+        root(Foobar1)
     }
 })
